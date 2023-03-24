@@ -1,10 +1,14 @@
 # Pytorch-template
 
-A simple template for pytorch projects. The template uses [Spock]{https://fidelity.github.io/spock/} for handling config files and command line arguments. The sample projects train a simple single image compression model on a dataset of images.
+A simple template for pytorch projects. The template uses [Spock](https://fidelity.github.io/spock/) for handling config files and command line arguments. The sample projects train a simple single image compression model on a dataset of images.
 
 ## Data
 
-The datasets are specified in text files containing one sample name per row. To such a text file from an existing folder of images simply use `find /path/to/folder/*.png > /path/to/data/train.txt`. Similarly for `eval.txt` and `test.txt`. 
+The datasets are specified in text files containing one sample name per row. To such a text file from an existing folder of images simply use 
+```
+find /path/to/folder/*.png > /path/to/data/train.txt
+```
+Similarly for `eval.txt` and `test.txt`. 
 
 ## Config
 
