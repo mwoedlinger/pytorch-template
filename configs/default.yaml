@@ -1,0 +1,32 @@
+# WandbConfig:
+entity: "CVL"
+project: "Template"
+group: "debug"
+tags: ["tag1", "tag2"]
+
+# ExperimentConfig:
+device: "cuda:0"
+
+# TrainingConfig:
+epochs: 200
+batch_size: 1
+eval_steps: 5000
+lr: 0.0001
+lmda: 0.01
+optimizer_name: "AdamW"
+optimizer_kwargs: {} # Without lr
+lr_scheduler_name: "ExponentialLR"
+lr_scheduler_kwargs: {"gamma": 0.1}
+lr_scheduler_drop: 500000
+
+# ModelConfig:
+name: "Baseline"
+kwargs: {"N": 192, "M": 12}
+
+# DataConfig:
+train_path: "/caa/Homes01/mwoedlinger/mResearch/pytorch-template/data/clic_kodak/train.txt"
+train_name: "clic#train"
+eval_path: "/caa/Homes01/mwoedlinger/mResearch/pytorch-template/data/clic_kodak/eval.txt"
+eval_name: "clic#eval"
+test_path: "/caa/Homes01/mwoedlinger/mResearch/pytorch-template/data/clic_kodak/test.txt"
+test_name: "kodak#test"
